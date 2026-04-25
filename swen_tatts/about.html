@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop | Tattootero's Ink Works</title>
+  <title>About | Tattootero's Ink Works</title>
+  <meta name="description" content="Learn about Tattootero's Ink Works, our process, and the tattoo styles we create." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -27,26 +31,64 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" aria-current="page">About</a>
       <a href="gallery.html">Gallery</a>
-      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="shop.html">Shop</a>
       <a href="index.html#contact">Contact</a>
     </nav>
 
     <a class="btn btn-outline header-cta" href="index.html#contact">Book A Consult</a>
   </header>
 
+  <ul class="social-rail" aria-label="Social links">
+    <li><a href="https://www.instagram.com/tattoteros.inkworks" aria-label="Instagram">IG</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=61572030596200" aria-label="Facebook">FB</a></li>
+  </ul>
+
   <main>
-    <section class="hero reveal" style="min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 2rem;">
+    <section class="hero reveal">
+      <img class="hero-image" src="images/previous%20works/2.jpg" alt="Tattoo artist at work" />
       <div class="hero-overlay"></div>
-      <div class="hero-content" style="max-width: 700px;">
-        <p class="eyebrow">Tattootero's Ink Works</p>
-        <h1>Shop Coming Soon</h1>
+      <div class="hero-content">
+        <p class="eyebrow">About Tattootero's Ink Works</p>
+        <h1>Custom Work Built<br />With Precision</h1>
         <p>
-          We’re preparing our online shop for aftercare kits, apparel, and gift cards.
-          Check back soon for updates.
+          We focus on clean execution, thoughtful design placement, and a client-first process from consultation to aftercare.
         </p>
-        <a class="btn btn-primary" href="index.html">Back to Home</a>
+        <a class="btn btn-primary" href="index.html#contact">Book Your Session</a>
+      </div>
+    </section>
+
+    <section class="about split reveal">
+      <figure class="panel-photo">
+        <img src="images/previous%20works/3.jpg" alt="Tattoo design consultation" />
+      </figure>
+      <div class="panel-copy">
+        <p class="section-tag">Our Process</p>
+        <h2>From Concept To Finished Piece</h2>
+        <p>
+          Every project starts with conversation and planning. We refine your idea into a design that fits your body, style, and
+          long-term wear.
+        </p>
+        <p>
+          During your session, we prioritize hygiene, comfort, and clear communication so you feel confident through every step.
+        </p>
+      </div>
+    </section>
+
+    <section class="services split reverse reveal">
+      <figure class="panel-photo">
+        <img src="images/previous%20works/6.jpg" alt="Detailed linework tattoo" />
+      </figure>
+      <div class="panel-copy">
+        <p class="section-tag">What We Do</p>
+        <h2>Styles And Services</h2>
+        <p>
+          We create fine-line, blackwork, realism, illustrative pieces, and custom lettering tailored to your preferred look.
+        </p>
+        <p>
+          We also handle strategic coverups and rework concepts to transform older tattoos into cleaner, stronger designs.
+        </p>
       </div>
     </section>
   </main>

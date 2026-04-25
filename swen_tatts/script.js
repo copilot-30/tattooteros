@@ -5,7 +5,9 @@ const header = document.querySelector('.site-header');
 document.documentElement.classList.add('js');
 
 function updateHeaderState() {
-  header.classList.toggle('scrolled', window.scrollY > 24);
+  if (header) {
+    header.classList.toggle('scrolled', window.scrollY > 24);
+  }
 }
 
 if (menuToggle && siteNav) {
@@ -23,7 +25,7 @@ if (menuToggle && siteNav) {
 }
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 860 && siteNav) {
+  if (window.innerWidth > 860 && siteNav && menuToggle) {
     siteNav.classList.remove('open');
     menuToggle.setAttribute('aria-expanded', 'false');
   }
@@ -66,4 +68,31 @@ if ('IntersectionObserver' in window) {
 const yearNode = document.getElementById('year');
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
+}
+
+const fullGalleryGrid = document.getElementById('full-gallery-grid');
+
+if (fullGalleryGrid) {
+  const start = Number(fullGalleryGrid.dataset.start || '1');
+  const end = Number(fullGalleryGrid.dataset.end || '109');
+  const basePath = fullGalleryGrid.dataset.basePath || 'images/previous%20works';
+  const fragment = document.createDocumentFragment();
+
+  for (let i = start; i <= end; i += 1) {
+    const img = document.createElement('img');
+    img.src = `${basePath}/${i}.jpg`;
+    img.alt = `Tattoo artwork ${i}`;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+
+    img.addEventListener('error', () => {
+      img.src = 'images/logo.jpg';
+      img.alt = `Tattoo artwork ${i} (image unavailable)`;
+      img.classList.add('gallery-fallback');
+    });
+
+    fragment.appendChild(img);
+  }
+
+  fullGalleryGrid.appendChild(fragment);
 }

@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop | Tattootero's Ink Works</title>
+  <title>Gallery | Tattootero's Ink Works</title>
+  <meta name="description" content="Browse sample tattoo works by Tattootero's Ink Works." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="gallery-page">
   <div class="ambient-glow" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -28,26 +32,33 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="shop.html">Shop</a>
       <a href="index.html#contact">Contact</a>
     </nav>
 
     <a class="btn btn-outline header-cta" href="index.html#contact">Book A Consult</a>
   </header>
 
+  <ul class="social-rail" aria-label="Social links">
+    <li><a href="https://www.instagram.com/tattoteros.inkworks" aria-label="Instagram">IG</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=61572030596200" aria-label="Facebook">FB</a></li>
+  </ul>
+
   <main>
-    <section class="hero reveal" style="min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 2rem;">
-      <div class="hero-overlay"></div>
-      <div class="hero-content" style="max-width: 700px;">
-        <p class="eyebrow">Tattootero's Ink Works</p>
-        <h1>Shop Coming Soon</h1>
-        <p>
-          We’re preparing our online shop for aftercare kits, apparel, and gift cards.
-          Check back soon for updates.
-        </p>
-        <a class="btn btn-primary" href="index.html">Back to Home</a>
+  <section class="artists" style="margin-top: 5.8rem;" id="gallery">
+      <div class="section-head artists-head">
+        <p class="section-tag">Sample Works</p>
+        <h2>Gallery Of Recent Designs</h2>
+        <a class="btn btn-outline" href="index.html#contact">Book A Session</a>
       </div>
+      <div
+        class="artist-grid"
+        id="full-gallery-grid"
+        data-start="1"
+        data-end="109"
+        data-base-path="images/previous%20works"
+      ></div>
     </section>
   </main>
 
